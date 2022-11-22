@@ -10,12 +10,11 @@ const RQSuperHeroesPage = () => {
       return axios.get("http://localhost:4000/superheroes");
     },
     {
-      staleTime: 30000,
-      refetchOnWindowFocus: true,
+      enabled: false,
     }
   );
 
-  const { isLoading, data, isError, error } = results;
+  const { isLoading, data, isError, error, refetch } = results;
 
   if (isLoading) {
     return <h2>Loading...</h2>;
@@ -28,6 +27,7 @@ const RQSuperHeroesPage = () => {
   return (
     <div>
       <h2>React Query Super Heroes</h2>
+      <button onClick={refetch}>Fetch Heroes</button>
       {data?.data.map((hero) => (
         <>
           <div key={hero.name}>{hero.name}</div>
