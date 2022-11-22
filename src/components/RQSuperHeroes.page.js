@@ -4,13 +4,22 @@ import { useQuery } from "react-query";
 import axios from "axios";
 
 const RQSuperHeroesPage = () => {
+  const onSuccess = (data) => {
+    console.log("Perform side effect after data fetching.");
+  };
+
+  const onError = (error) => {
+    console.log("Perform side effect after encountering error.");
+  };
+
   const results = useQuery(
     "super-heroes",
     () => {
       return axios.get("http://localhost:4000/superheroes");
     },
     {
-      enabled: false,
+      onSuccess: onSuccess,
+      onError: onError,
     }
   );
 
