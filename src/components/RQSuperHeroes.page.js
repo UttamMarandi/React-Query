@@ -18,12 +18,16 @@ const RQSuperHeroesPage = () => {
       return axios.get("http://localhost:4000/superheroes");
     },
     {
-      onSuccess: onSuccess,
-      onError: onError,
+      select: (data) => {
+        const superHeroNames = data.data.map((hero) => hero.name);
+        return superHeroNames;
+      },
     }
   );
 
   const { isLoading, data, isError, error, refetch } = results;
+  console.log("data:", data);
+  console.log("results:", results);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
@@ -37,10 +41,13 @@ const RQSuperHeroesPage = () => {
     <div>
       <h2>React Query Super Heroes</h2>
       <button onClick={refetch}>Fetch Heroes</button>
-      {data?.data.map((hero) => (
+      {/* {data?.data.map((hero) => (
         <>
           <div key={hero.name}>{hero.name}</div>
         </>
+      ))} */}
+      {data.map((hero) => (
+        <div key={hero}>{hero}</div>
       ))}
     </div>
   );
