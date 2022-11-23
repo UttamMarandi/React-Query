@@ -15,5 +15,22 @@
       "name": "Batman",
       "alterEgo": "Bruce Wayne"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Uttam",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Sanjay",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Tarun",
+      "alterEgo": "Bruce Wayne"
+    }
   ]
 }
