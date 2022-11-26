@@ -31,3 +31,21 @@ export const useAddSuperHeroData = () => {
     },
   });
 };
+
+//  Mutation response handling
+
+export const useAddSuperHeroDataWithMutation = () => {
+  const queryClient = useQueryClient(); // get the instance of the query client
+  return useMutation(addSuperHero, {
+    onSuccess: (data) => {
+      //data refers to the entire response of the post req.
+
+      queryClient.setQueryData("super-heroes", (oldQueryData) => {
+        return {
+          ...oldQueryData,
+          data: [...oldQueryData.data, data.data],
+        };
+      });
+    },
+  });
+};
