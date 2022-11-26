@@ -1,11 +1,14 @@
 import axios from "axios";
 import { useMutation, useQuery, useQueryClient } from "react-query";
+import { request } from "../utils/axios-utils";
 
 export const useSuperHeroesData = (onSuccess, onError) => {
   return useQuery(
     "super-heroes",
     () => {
-      return axios.get("http://localhost:4000/superheroes");
+      return request({
+        url: "/superheroes",
+      });
     },
     {
       onSuccess: onSuccess,
