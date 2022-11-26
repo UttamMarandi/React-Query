@@ -32,5 +32,23 @@
       "name": "Tarun",
       "alterEgo": "Bruce Wayne"
     }
+  ],
+  "users": [
+    {
+      "id": "uttam@uttam.com",
+      "name": "Uttam",
+      "channelId": "Uttam Heroics"
+    },
+    {
+      "id": "tarun@tarun.com",
+      "name": "Tarun",
+      "channelId": "Tarun Heroics"
+    }
+  ],
+  "channels": [
+    {
+      "id": "Uttam Heroics",
+      "courses": ["heroics", "alfa", "sigma"]
+    }
   ]
 }
