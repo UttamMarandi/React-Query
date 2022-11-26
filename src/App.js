@@ -31,6 +31,9 @@ function App() {
             </ul>
           </nav>
           <Switch>
+            <Route path="/rq-paginated">
+              <ParallelQueriesPage />
+            </Route>
             <Route path="/rq-dependent">
               <DependentQueriesPage email="uttam@marandi.com" />
             </Route>

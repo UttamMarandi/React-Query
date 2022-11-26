@@ -50,5 +50,35 @@
       "id": "Uttam Heroics",
       "courses": ["heroics", "alfa", "sigma"]
     }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "green"
+    },
+    {
+      "id": 2,
+      "label": "red"
+    },
+    {
+      "id": 3,
+      "label": "blue"
+    },
+    {
+      "id": 5,
+      "label": "orange"
+    },
+    {
+      "id": 6,
+      "label": "black"
+    },
+    {
+      "id": 7,
+      "label": "white"
+    },
+    {
+      "id": 8,
+      "label": "purple"
+    }
   ]
 }
