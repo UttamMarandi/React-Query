@@ -9,6 +9,7 @@ import RQSuperHeroPage from "./components/RQSuperHero.page";
 import ParallelQueriesPage from "./components/ParallelQueries.page";
 import { DynamicParallelPage } from "./components/DynamicParallel.page";
 import { DependentQueriesPage } from "./components/DependentQueries";
+import { MutationQueries } from "./components/MutationQueries";
 
 const queryClient = new QueryClient(); // instance of query client
 
@@ -31,6 +32,9 @@ function App() {
             </ul>
           </nav>
           <Switch>
+            <Route path="/rq-mutation">
+              <MutationQueries />
+            </Route>
             <Route path="/rq-paginated">
               <ParallelQueriesPage />
             </Route>

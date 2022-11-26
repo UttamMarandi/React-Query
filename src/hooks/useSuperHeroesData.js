@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useQuery } from "react-query";
+import { useMutation, useQuery } from "react-query";
 
 export const useSuperHeroesData = (onSuccess, onError) => {
   return useQuery(
@@ -16,4 +16,13 @@ export const useSuperHeroesData = (onSuccess, onError) => {
       //   },
     }
   );
+};
+
+const addSuperHero = (hero) => {
+  // hero is passed by default. This "hero" is the same object as passes to the mutate method while consuming the mutation
+  return axios.post("http://localhost:4000/superheroes", hero);
+};
+
+export const useAddSuperHeroData = () => {
+  return useMutation(addSuperHero);
 };

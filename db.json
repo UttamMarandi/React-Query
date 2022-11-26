@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Batman",
       "alterEgo": "Bruce Wayne"
+    },
+    {
+      "name": "Spiderman",
+      "alterEgo": "Peter Parker",
+      "id": 4
     }
   ],
   "friends": [
@@ -48,7 +53,11 @@
   "channels": [
     {
       "id": "Uttam Heroics",
-      "courses": ["heroics", "alfa", "sigma"]
+      "courses": [
+        "heroics",
+        "alfa",
+        "sigma"
+      ]
     }
   ],
   "colors": [
